@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    { "source": "/Landing-Page/faca-bigode-landing-page/faca-bigode-landing-page", "destination": "/index.html" }
   ]
 }

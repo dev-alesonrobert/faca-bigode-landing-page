@@ -1,5 +1,8 @@
 # Faca&Bigode — Landing Page
 
+Conheça o projeto:  
+https://facaebigode.com.br
+
 Landing page oficial do **Faca&Bigode**, uma plataforma SaaS desenvolvida para facilitar a gestão de barbearias.
 
 ## ✂️ Sobre o projeto
@@ -32,6 +35,3 @@ A landing page foi desenvolvida com uma identidade visual **dark, moderna e prem
 ## 🚀 Faca&Bigode
 
 **Sua barbearia. Mais organizada. Mais profissional.**
-
-Conheça o projeto:  
-https://facaebigode.com.br

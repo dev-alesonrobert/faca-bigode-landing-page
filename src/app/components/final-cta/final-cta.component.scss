@@ -1,0 +1,107 @@
+.button {
+    border: 0;
+    background: linear-gradient(110deg, #7140e9, #a855f7);
+    box-shadow: 0 9px 25px rgba(124, 58, 237, .22);
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    transition: transform .25s, box-shadow .25s
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 13px 30px rgba(124, 58, 237, .38)
+}
+
+.button.light {
+    background: #fff;
+    color: #421784;
+    box-shadow: none;
+    padding: 15px 22px
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .65s ease, transform .65s ease
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none
+}
+
+.label {
+    color: #b99cff;
+    font-size: 11px;
+    letter-spacing: 1.1px;
+    font-weight: 700
+}
+
+.final-cta {
+    position: relative;
+    margin: 45px auto 0;
+    max-width: 1200px;
+    min-height: 360px;
+    overflow: hidden;
+    background: linear-gradient(120deg, #24104d, #5e27bd 52%, #2c115b);
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 55px 25px
+}
+
+.cta-glow {
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    background: radial-gradient(ellipse, rgba(211, 165, 255, .38), transparent 60%);
+    top: -250px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.final-cta>div {
+    position: relative;
+    max-width: 690px
+}
+
+.final-cta .label {
+    color: #e1d2ff
+}
+
+.final-cta h2 {
+    font: 600 clamp(32px, 3.9vw, 52px)/1.08 var(--heading);
+    letter-spacing: -1.8px;
+    margin: 16px 0
+}
+
+.final-cta p {
+    color: #e5dbf5;
+    margin-bottom: 25px
+}
+
+.final-cta small {
+    display: block;
+    margin-top: 14px;
+    color: #ddd0f2;
+    font-size: 10px
+}
+
+@media (max-width:600px) {
+.final-cta {
+        margin-top: 0;
+        min-height: 330px
+    }
+
+.final-cta h2 {
+        font-size: 33px
+    }
+}

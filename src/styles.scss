@@ -1,0 +1,28 @@
+:root {
+    --bg: #090909;
+    --panel: #111;
+    --card: #151515;
+    --line: rgba(255, 255, 255, .09);
+    --muted: #a1a1aa;
+    --purple: #7c3aed;
+    --lightpurple: #a855f7;
+    --font: 'DM Sans', sans-serif;
+    --heading: 'Outfit', sans-serif
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 15px;
+    overflow-x: hidden
+}

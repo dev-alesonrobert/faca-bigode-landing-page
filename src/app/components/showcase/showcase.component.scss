@@ -1,0 +1,281 @@
+.text-button {
+    color: #eee;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px
+}
+
+.text-button:hover {
+    color: #c4b5fd
+}
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 125px 32px
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .65s ease, transform .65s ease
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none
+}
+
+.label {
+    color: #b99cff;
+    font-size: 11px;
+    letter-spacing: 1.1px;
+    font-weight: 700
+}
+
+.showcase h2 {
+    font: 600 clamp(33px, 3.4vw, 49px)/1.08 var(--heading);
+    letter-spacing: -1.8px;
+    margin: 14px 0
+}
+
+.showcase p {
+    color: #96969f;
+    line-height: 1.7;
+    font-size: 15px
+}
+
+.showcase {
+    display: grid;
+    grid-template-columns: .83fr 1.17fr;
+    gap: 75px;
+    align-items: center;
+    padding-top: 100px
+}
+
+.showcase-copy ul {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0
+}
+
+.showcase-copy li {
+    color: #c5c5ca;
+    font-size: 13px;
+    margin: 13px 0
+}
+
+.showcase-copy li span {
+    color: #ba8dff;
+    margin-right: 8px
+}
+
+.analytics {
+    min-height: 395px;
+    position: relative
+}
+
+.analytics-window {
+    position: relative;
+    z-index: 1;
+    background: #141416;
+    border: 1px solid #303035;
+    border-radius: 11px;
+    padding: 25px;
+    box-shadow: 0 22px 60px rgba(0, 0, 0, .45)
+}
+
+.analytics-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: start
+}
+
+.analytics-head small {
+    color: #92929b;
+    font-size: 9px;
+    letter-spacing: .7px
+}
+
+.analytics-head h3 {
+    font: 600 19px var(--heading);
+    margin: 5px 0
+}
+
+.analytics-head button {
+    color: #b9b9c0;
+    border: 1px solid #34343b;
+    background: #1e1e22;
+    padding: 7px 9px;
+    border-radius: 5px;
+    font-size: 9px
+}
+
+.analytics-metrics {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 20px 0
+}
+
+.analytics-metrics div {
+    border: 1px solid #29292f;
+    background: #19191c;
+    padding: 10px;
+    border-radius: 6px
+}
+
+.analytics-metrics small {
+    font-size: 8px;
+    color: #9999a2;
+    display: block
+}
+
+.analytics-metrics b {
+    font: 600 15px var(--heading);
+    display: block;
+    margin: 5px 0
+}
+
+.analytics-metrics span {
+    color: #69dda2;
+    font-size: 8px
+}
+
+.chart {
+    height: 170px;
+    position: relative;
+    background: linear-gradient(#1c1c20 1px, transparent 1px);
+    background-size: 100% 43px;
+    padding-left: 38px
+}
+
+.chart-labels {
+    position: absolute;
+    left: 0;
+    top: -4px;
+    display: flex;
+    height: 137px;
+    justify-content: space-between;
+    flex-direction: column;
+    color: #6d6d76;
+    font-size: 8px
+}
+
+.chart svg {
+    width: 100%;
+    height: 145px
+}
+
+.chart-days {
+    display: flex;
+    justify-content: space-between;
+    color: #74747d;
+    font-size: 8px;
+    margin-top: -3px
+}
+
+.floating-stat {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid rgba(255, 255, 255, .14);
+    background: #1b1920;
+    box-shadow: 0 13px 30px rgba(0, 0, 0, .4);
+    padding: 10px;
+    border-radius: 7px
+}
+
+.floating-stat b {
+    font: 600 17px var(--heading);
+    color: #c9acff
+}
+
+.floating-stat span {
+    font-size: 8px;
+    color: #aaa;
+    line-height: 1.35
+}
+
+.stat-one {
+    right: -24px;
+    top: 28px
+}
+
+.stat-two {
+    left: -25px;
+    bottom: 40px
+}
+
+@media (max-width:900px) {
+.showcase {
+        grid-template-columns: 1fr;
+        gap: 45px
+    }
+
+.analytics {
+        max-width: 650px;
+        width: 90%;
+        margin: auto
+    }
+}
+
+@media (max-width:600px) {
+.section {
+        padding: 78px 20px
+    }
+
+.showcase h2 {
+        font-size: 32px
+    }
+
+.showcase {
+        padding-top: 40px
+    }
+
+.analytics {
+        width: 100%;
+        min-height: 330px
+    }
+
+.analytics-window {
+        padding: 15px
+    }
+
+.analytics-metrics {
+        gap: 4px
+    }
+
+.analytics-metrics div {
+        padding: 7px
+    }
+
+.analytics-metrics b {
+        font-size: 11px
+    }
+
+.analytics-metrics span {
+        font-size: 7px
+    }
+
+.stat-one {
+        right: -12px
+    }
+
+.stat-two {
+        left: -12px
+    }
+
+.analytics-head h3 {
+        font-size: 15px
+    }
+
+.chart-days {
+        font-size: 6px
+    }
+}

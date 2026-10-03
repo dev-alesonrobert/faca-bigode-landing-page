@@ -1,0 +1,143 @@
+.placeholder {
+    color: #62626b;
+    font-size: 9px
+}
+
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 125px 32px
+}
+
+.section-head {
+    max-width: 640px
+}
+
+.centered {
+    text-align: center;
+    margin: 0 auto
+}
+
+.p1 {
+    background: #56364a
+}
+
+.p2 {
+    background: #4c3b25
+}
+
+.p3 {
+    background: #244450
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .65s ease, transform .65s ease
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none
+}
+
+.label {
+    color: #b99cff;
+    font-size: 11px;
+    letter-spacing: 1.1px;
+    font-weight: 700
+}
+
+.section-head h2 {
+    font: 600 clamp(33px, 3.4vw, 49px)/1.08 var(--heading);
+    letter-spacing: -1.8px;
+    margin: 14px 0
+}
+
+.section-head p {
+    color: #96969f;
+    line-height: 1.7;
+    font-size: 15px
+}
+
+.testimonials {
+    padding-top: 80px
+}
+
+.testimonial-grid {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px
+}
+
+.quote-card {
+    border: 1px solid #29292e;
+    background: #121212;
+    padding: 25px;
+    border-radius: 9px;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column
+}
+
+.stars {
+    color: #a855f7;
+    font-size: 14px;
+    letter-spacing: 2px
+}
+
+.quote-card blockquote {
+    margin: 18px 0;
+    font: 500 16px/1.55 var(--heading);
+    letter-spacing: -.2px;
+    color: #ddd
+}
+
+.person {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    gap: 9px
+}
+
+.person-avatar {
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 8px;
+    color: #eee
+}
+
+.person b {
+    display: block;
+    font-size: 10px
+}
+
+.person small {
+    display: block;
+    font-size: 9px;
+    color: #83838c;
+    margin-top: 2px
+}
+
+.center-note {
+    text-align: center;
+    margin: 15px 0 0
+}
+
+@media (max-width:600px) {
+.section {
+        padding: 78px 20px
+    }
+
+.section-head h2 {
+        font-size: 32px
+    }
+
+.testimonial-grid {
+        grid-template-columns: 1fr
+    }
+}

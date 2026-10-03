@@ -1,0 +1,230 @@
+.button {
+    border: 0;
+    background: linear-gradient(110deg, #7140e9, #a855f7);
+    box-shadow: 0 9px 25px rgba(124, 58, 237, .22);
+    padding: 14px 20px;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    display: inline-flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    transition: transform .25s, box-shadow .25s
+}
+
+.button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 13px 30px rgba(124, 58, 237, .38)
+}
+
+.button.small {
+    padding: 10px 15px;
+    font-size: 12px
+}
+
+.button.light {
+    background: #fff;
+    color: #421784;
+    box-shadow: none;
+    padding: 15px 22px
+}
+
+.site-header {
+    height: 76px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 max(5vw, 32px);
+    border-bottom: 1px solid rgba(255, 255, 255, .06);
+    background: rgba(9, 9, 9, .75);
+    backdrop-filter: blur(16px)
+}
+
+.brand {
+    color: #fff;
+    text-decoration: none;
+    font: 600 19px var(--heading);
+    letter-spacing: -.8px;
+    display: flex;
+    align-items: center;
+    gap: 9px
+}
+
+.brand>span:last-child>span {
+    color: #a855f7
+}
+
+.brand-mark {
+    display: inline-flex;
+    width: 25px;
+    height: 21px;
+    position: relative;
+    overflow: hidden
+}
+
+.brand-mark svg {
+    display: block;
+    width: 25px;
+    height: 21px;
+    fill: #a855f7
+}
+
+.desktop-nav {
+    display: flex;
+    gap: 28px;
+    margin-left: 70px
+}
+
+.desktop-nav a,
+.login {
+    color: #b4b4bd;
+    text-decoration: none;
+    font-size: 13px;
+    transition: .2s
+}
+
+.desktop-nav a:hover,
+.login:hover {
+    color: #fff
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 22px
+}
+
+.menu-toggle,
+.mobile-nav {
+    display: none
+}
+
+@media (max-width:900px) {
+.desktop-nav {
+        display: none
+    }
+
+.menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        border: 0
+    }
+
+.menu-toggle span {
+        display: block;
+        background: #ddd;
+        width: 20px;
+        height: 1px
+    }
+
+.header-actions .login {
+        display: none
+    }
+
+.mobile-nav {
+        position: fixed;
+        z-index: 9;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: rgba(13, 13, 14, .98);
+        padding: 22px 5vw;
+        flex-direction: column;
+        gap: 19px;
+        border-bottom: 1px solid #2a2a2e;
+        transform: translateY(-130%);
+        transition: .25s
+    }
+
+.mobile-nav.open {
+        transform: none
+    }
+
+.mobile-nav a {
+        color: #ccc;
+        text-decoration: none;
+        font-size: 14px
+    }
+}
+
+@media (max-width:600px) {
+.site-header {
+        padding: 0 20px;
+        height: 64px
+    }
+
+.mobile-nav {
+        top: 64px
+    }
+
+.header-actions .button {
+        display: none
+    }
+}
+
+// O CSS fornecido mantinha display:none também no mobile.
+// Esta adaptação habilita o menu sem mudar o breakpoint ou a transição.
+@media (max-width:900px) {
+    .mobile-nav {
+        display: flex;
+    }
+}
+
+.announcement-band {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    height: 32px;
+    overflow: hidden;
+    background: linear-gradient(110deg, #7140e9, #a855f7);
+    color: #fff;
+    pointer-events: none;
+
+    .announcement-track {
+        display: flex;
+        width: max-content;
+        height: 100%;
+        animation: announcement-scroll 24s linear infinite;
+    }
+
+    .announcement-group {
+        display: flex;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: space-around;
+        width: max(100vw, 960px);
+
+        span {
+            white-space: nowrap;
+            font: 700 11px var(--font);
+            letter-spacing: 1.1px;
+        }
+    }
+}
+
+@keyframes announcement-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+@media (max-width:900px) {
+    .mobile-nav { top: 108px; }
+}
+
+@media (max-width:600px) {
+    .announcement-band { top: 64px; }
+    .mobile-nav { top: 96px; }
+}
+

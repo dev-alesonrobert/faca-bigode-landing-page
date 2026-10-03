@@ -1,0 +1,119 @@
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 125px 32px
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .65s ease, transform .65s ease
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none
+}
+
+.label {
+    color: #b99cff;
+    font-size: 11px;
+    letter-spacing: 1.1px;
+    font-weight: 700
+}
+
+.aud-card:hover {
+    border-color: rgba(168, 85, 247, .45);
+    transform: translateY(-4px)
+}
+
+.aud-card p {
+    font-size: 12px;
+    line-height: 1.65;
+    color: #909099;
+    margin: 0
+}
+
+.audience-heading h2 {
+    font: 600 clamp(33px, 3.4vw, 49px)/1.08 var(--heading);
+    letter-spacing: -1.8px;
+    margin: 14px 0
+}
+
+.audience {
+    padding-top: 50px
+}
+
+.audience-heading {
+    max-width: 500px
+}
+
+.audience-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 42px
+}
+
+.aud-card {
+    min-height: 265px;
+    border: 1px solid #2b2b30;
+    background: #111;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: .25s
+}
+
+.aud-card>span {
+    color: #8664bd;
+    font: 600 12px var(--heading)
+}
+
+.aud-card h3 {
+    font: 600 24px/1.1 var(--heading);
+    letter-spacing: -.8px;
+    margin: 45px 0 10px
+}
+
+.aud-card a {
+    position: absolute;
+    bottom: 23px;
+    color: #c09bff;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700
+}
+
+.aud-card.featured {
+    background: linear-gradient(145deg, #211440, #130d22);
+    border-color: #6436a9
+}
+
+.aud-card.featured:after {
+    content: '✦';
+    font-size: 120px;
+    position: absolute;
+    right: -21px;
+    top: -31px;
+    color: #9d65fa;
+    opacity: .13
+}
+
+@media (max-width:600px) {
+.section {
+        padding: 78px 20px
+    }
+
+.audience-heading h2 {
+        font-size: 32px
+    }
+
+.audience-cards {
+        grid-template-columns: 1fr
+    }
+
+.aud-card {
+        min-height: 220px
+    }
+}

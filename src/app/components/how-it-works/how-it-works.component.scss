@@ -1,0 +1,132 @@
+.section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 125px 32px
+}
+
+.section-head {
+    max-width: 640px
+}
+
+.centered {
+    text-align: center;
+    margin: 0 auto
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .65s ease, transform .65s ease
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: none
+}
+
+.label {
+    color: #b99cff;
+    font-size: 11px;
+    letter-spacing: 1.1px;
+    font-weight: 700
+}
+
+.section-head h2 {
+    font: 600 clamp(33px, 3.4vw, 49px)/1.08 var(--heading);
+    letter-spacing: -1.8px;
+    margin: 14px 0
+}
+
+.how {
+    padding-top: 100px
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 58px;
+    position: relative
+}
+
+.steps:before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background: linear-gradient(90deg, #6d3ac7, rgba(124, 58, 237, .1));
+    left: 5%;
+    right: 5%;
+    top: 25px
+}
+
+.step {
+    position: relative;
+    padding: 0 45px 0 0
+}
+
+.step:not(:first-child) {
+    padding-left: 30px
+}
+
+.step>span {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    width: 51px;
+    height: 51px;
+    border: 1px solid #7543d0;
+    background: #1b1528;
+    color: #c7a8ff;
+    border-radius: 50%;
+    font: 600 12px var(--heading)
+}
+
+.step h3 {
+    font: 600 19px var(--heading);
+    margin: 22px 0 7px
+}
+
+.step p {
+    color: #8f8f98;
+    font-size: 13px;
+    line-height: 1.6
+}
+
+@media (max-width:600px) {
+.section {
+        padding: 78px 20px
+    }
+
+.section-head h2 {
+        font-size: 32px
+    }
+
+.steps {
+        grid-template-columns: 1fr;
+        gap: 30px
+    }
+
+.steps:before {
+        width: 1px;
+        height: auto;
+        top: 20px;
+        bottom: 20px;
+        left: 25px;
+        right: auto
+    }
+
+.step,
+.step:not(:first-child) {
+        padding: 0 0 0 72px
+    }
+
+.step>span {
+        position: absolute;
+        left: 0;
+        top: 0
+    }
+
+.step h3 {
+        margin: 0 0 7px
+    }
+}

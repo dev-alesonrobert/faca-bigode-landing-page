@@ -1,0 +1,52 @@
+<section class="section pricing" id="planos">
+    <div class="section-head centered reveal" appReveal><span class="label">PLANOS FLEXÍVEIS</span>
+        <h2>Escolha o plano ideal para sua barbearia.</h2>
+        <p>Comece agora. Evolua quando o seu negócio pedir.</p>
+        <div class="billing"><button [class.active]="billingInterval === 'monthly'"
+                (click)="setBillingInterval('monthly')" data-price="monthly">Mensal</button><button
+                [class.active]="billingInterval === 'annual'" (click)="setBillingInterval('annual')"
+                data-price="annual">Anual <b>-20%</b></button></div>
+    </div>
+    <div class="price-grid">
+        <article class="price-card reveal" appReveal>
+            <h3>Essencial</h3>
+            <p>Para começar com organização.</p>
+            <div class="price"><small>R$</small><strong data-month="XX" data-year="XX">{{ billingInterval === 'annual' ?
+                    'XX' : 'XX' }}</strong><span>/mês</span></div><small class="price-note">Preço a definir</small><a
+                class="outline-button" href="#">Começar agora</a>
+            <ul>
+                <li>✓ Agenda inteligente</li>
+                <li>✓ Gestão de clientes</li>
+                <li>✓ Serviços e preços</li>
+                <li>✓ Perfil da barbearia</li>
+            </ul>
+        </article>
+        <article class="price-card popular reveal" appReveal><span class="popular-tag">MAIS POPULAR</span>
+            <h3>Profissional</h3>
+            <p>Para uma gestão de ponta a ponta.</p>
+            <div class="price"><small>R$</small><strong data-month="XX" data-year="XX">{{ billingInterval === 'annual' ?
+                    'XX' : 'XX' }}</strong><span>/mês</span></div><small class="price-note">Preço a definir</small><a
+                class="button full" href="#">Começar agora <b>→</b></a>
+            <ul>
+                <li>✓ Tudo do Essencial</li>
+                <li>✓ Gestão de barbeiros</li>
+                <li>✓ Dashboard completo</li>
+                <li>✓ Relatórios de desempenho</li>
+                <li>✓ Controle financeiro</li>
+            </ul>
+        </article>
+        <article class="price-card reveal" appReveal>
+            <h3>Premium</h3>
+            <p>Para negócios que querem escalar.</p>
+            <div class="price"><small>R$</small><strong data-month="XX" data-year="XX">{{ billingInterval === 'annual' ?
+                    'XX' : 'XX' }}</strong><span>/mês</span></div><small class="price-note">Preço a definir</small><a
+                class="outline-button" href="#">Falar com vendas</a>
+            <ul>
+                <li>✓ Tudo do Profissional</li>
+                <li>✓ Recursos avançados</li>
+                <li>✓ Relatórios avançados</li>
+                <li>✓ Suporte prioritário</li>
+            </ul>
+        </article>
+    </div>
+</section>

@@ -2,7 +2,7 @@
     <div class="section-head centered reveal" appReveal><span class="label">PLANOS FLEXÍVEIS</span>
         <h2>Escolha o plano ideal para sua barbearia.</h2>
         <p>Comece agora. Evolua quando o seu negócio pedir.</p>
-        <div class="billing"><button [class.active]="billingInterval === 'monthly'"
+        <div class="billing"><button type="button" [attr.aria-pressed]="billingInterval === 'monthly'" [class.active]="billingInterval === 'monthly'"
                 (click)="setBillingInterval('monthly')" data-price="monthly">Mensal</button><button
                 [class.active]="billingInterval === 'annual'" (click)="setBillingInterval('annual')"
                 data-price="annual">Anual <b>-20%</b></button></div>
@@ -11,8 +11,7 @@
         <article class="price-card reveal" appReveal>
             <h3>Essencial</h3>
             <p>Para começar com organização.</p>
-            <div class="price"><small>R$</small><strong data-month="XX" data-year="XX">{{ billingInterval === 'annual' ?
-                    'XX' : 'XX' }}</strong><span>/mês</span></div><small class="price-note">Preço a definir</small><a
+            <div class="price"><small>R$</small><strong>{{ priceFor('essential') }}</strong><span>/mês</span></div><small class="price-note">{{ billingNoteFor('essential') }}</small><a
                 class="outline-button" href="#">Começar agora</a>
             <ul>
                 <li>✓ Agenda inteligente</li>
@@ -24,8 +23,7 @@
         <article class="price-card popular reveal" appReveal><span class="popular-tag">MAIS POPULAR</span>
             <h3>Profissional</h3>
             <p>Para uma gestão de ponta a ponta.</p>
-            <div class="price"><small>R$</small><strong data-month="XX" data-year="XX">{{ billingInterval === 'annual' ?
-                    'XX' : 'XX' }}</strong><span>/mês</span></div><small class="price-note">Preço a definir</small><a
+            <div class="price"><small>R$</small><strong>{{ priceFor('professional') }}</strong><span>/mês</span></div><small class="price-note">{{ billingNoteFor('professional') }}</small><a
                 class="button full" href="#">Começar agora <b>→</b></a>
             <ul>
                 <li>✓ Tudo do Essencial</li>
@@ -38,8 +36,7 @@
         <article class="price-card reveal" appReveal>
             <h3>Premium</h3>
             <p>Para negócios que querem escalar.</p>
-            <div class="price"><small>R$</small><strong data-month="XX" data-year="XX">{{ billingInterval === 'annual' ?
-                    'XX' : 'XX' }}</strong><span>/mês</span></div><small class="price-note">Preço a definir</small><a
+            <div class="price"><small>R$</small><strong>{{ priceFor('premium') }}</strong><span>/mês</span></div><small class="price-note">{{ billingNoteFor('premium') }}</small><a
                 class="outline-button" href="#">Falar com vendas</a>
             <ul>
                 <li>✓ Tudo do Profissional</li>

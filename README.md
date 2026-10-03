@@ -162,7 +162,7 @@ Algumas funcionalidades que podem ser adicionadas futuramente:
 
 ## 👨‍💻 Desenvolvedor
 
-Desenvolvido por **Aleson Roberto**.
+Desenvolvido por **AW Develop**.
 
 💻 Projeto desenvolvido com foco em **desenvolvimento web, design e experiência do usuário**.
 

@@ -7,8 +7,6 @@ Landing page moderna, responsiva e otimizada para apresentação de produtos, se
 🌐 **Acesse o projeto online:**
 https://facaebigode.com.br
 
-> Substitua o endereço acima pela URL da sua landing page na Vercel.
-
 ---
 
 ## 📌 Sobre o projeto
